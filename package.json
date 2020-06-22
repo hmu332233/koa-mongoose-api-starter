@@ -2,6 +2,23 @@
   "name": "koa-mongoose-api-starter",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "start:dev": "NODE_ENV=development NODE_CONFIG_DIR=./configs/app node app.js",
+    "test": "NODE_ENV=test NODE_CONFIG_DIR=./configs/app jest --detectOpenHandles --forceExit --config ./configs/jest.config.js",
+    "test:coverage": "npm test --coverage",
+    "prettier": "prettier --write --config ./configs/prettier.config.js '*.js'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm test",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run prettier"
+    ]
+  },
   "repository": "https://github.com/hmu332233/koa-mongoose-api-starter.git",
   "author": "minung.han <hmu332233@gmail.com>",
   "license": "MIT",
@@ -18,5 +35,5 @@
     "jest": "^26.0.1",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5"
-  }  
+  }
 }
