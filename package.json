@@ -1,0 +1,22 @@
+{
+  "name": "koa-mongoose-api-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hmu332233/koa-mongoose-api-starter.git",
+  "author": "minung.han <hmu332233@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@koa/router": "^9.0.1",
+    "config": "^3.3.1",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "mongoose": "^5.9.19"
+  },
+  "devDependencies": {
+    "@shelf/jest-mongodb": "^1.1.5",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5"
+  }  
+}
