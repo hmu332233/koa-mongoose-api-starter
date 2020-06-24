@@ -1,4 +1,4 @@
-global.__path = `${__dirname}/`;
+global.__path = __dirname;
 
 const Config = require('config');
 const Koa = require('koa');
@@ -31,6 +31,7 @@ app.use(async (ctx, next) => {
   }
 });
 
+router.use('/api', require('./routes').routes());
 app.use(router.routes());
 app.use(router.allowedMethods());
 
