@@ -23,6 +23,7 @@
   "author": "minung.han <hmu332233@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@koa/cors": "^3.1.0",
     "@koa/router": "^9.0.1",
     "config": "^3.3.1",
     "koa": "^2.13.0",
