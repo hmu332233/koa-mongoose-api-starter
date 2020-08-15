@@ -6,6 +6,7 @@ module.exports = {
     mongodb: {
       url: '',
       opts: {},
+      debug: true,
     },
   },
 };

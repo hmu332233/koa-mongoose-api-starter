@@ -6,6 +6,7 @@ module.exports = {
     mongodb: {
       url: process.env.MONGO_URL,
       opts: {},
+      debug: false,
     },
   },
 };

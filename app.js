@@ -12,7 +12,7 @@ app.use(bodyParser());
 
 mongoose.Promise = global.Promise;
 mongoose.connect(Config.db.mongodb.url, Config.db.mongodb.opts);
-mongoose.set('debug', true);
+mongoose.set('debug', Config.db.mongodb.debug);
 
 // error handler
 app.use(async (ctx, next) => {
