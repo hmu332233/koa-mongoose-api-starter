@@ -9,4 +9,9 @@ module.exports = {
       debug: false,
     },
   },
+  log: {
+    console: {
+      level: 'silent',
+    },
+  },
 };

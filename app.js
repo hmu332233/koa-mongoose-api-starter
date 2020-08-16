@@ -8,6 +8,8 @@ const bodyParser = require('koa-bodyparser');
 
 const mongoose = require('mongoose');
 
+const logger = require(`${global.__path}/utils/logger`);
+
 const app = (module.exports = new Koa());
 app.use(cors());
 app.use(bodyParser());
@@ -27,9 +29,7 @@ app.use(async (ctx, next) => {
       code: err.code,
     };
 
-    if (ctx.status === 500) {
-      console.log(err);
-    }
+    logger.error(err);
   }
 });
 

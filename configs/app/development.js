@@ -9,4 +9,9 @@ module.exports = {
       debug: true,
     },
   },
+  log: {
+    console: {
+      level: 'trace',
+    },
+  },
 };
